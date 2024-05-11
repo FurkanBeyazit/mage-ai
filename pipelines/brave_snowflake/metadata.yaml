@@ -1,0 +1,74 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - bank_transformer
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: bank_load
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: bank_load
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - bank_ml
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: bank_transformer
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - bank_load
+  uuid: bank_transformer
+- all_upstream_blocks_executed: true
+  color: teal
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: Bank_ML
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - bank_transformer
+  uuid: bank_ml
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-05-05 06:55:13.774878+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: brave snowflake
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: brave_snowflake
+variables_dir: "C:\\Users\\\uCD5C\uBCC4\uD76C/.mage_data\\furkan"
+widgets: []
