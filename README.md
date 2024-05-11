@@ -1,5 +1,1 @@
-"# mage-ai" 
-"# mage-ai" 
-"# mage-ai" 
-"# mage-ai" 
-"# 디디오 성공" 
+mage ai [Banking](https://archive.ics.uci.edu/dataset/222/bank+marketing) dataset RandomForestClassifier RandomizedSearchCV tuning
